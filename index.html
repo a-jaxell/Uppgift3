@@ -6,11 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uppgift 3</title>
     <link rel="stylesheet" href="/resources/css/style.css">
-    <script src="/resources/javascript/script.js"></script>
+    <!-- <script src="/resources/javascript/script.js"></script> -->
+
+
 </head>
 <body>
     <h1 id="title">Hello World</h1>
-    <input id="knapp" type="button" value="Klick">
-    
+    <button onclick="changeTitle()">Klick</button>
+   
+   <script>
+        // Genom att deklarera variabeln title utanför funktionen changeTitle så undviker man att inget händer
+        // första gången man klickar på knappen.
+        let title = document.getElementById("title").innerHTML;
+        
+        function changeTitle(){
+            // Ternary operator fungerar inte, tar gärna feedback på varför. 
+            // title = (title === "Hello World") ? title = "Goodbye World" : title = "Hello World";
+            
+            if (title == "Hello World"){
+               title = "Goodbye World";
+                } else {
+                    title = "Hello World";
+                }
+            return document.getElementById("title").innerHTML = title;
+        }
+    </script>
 </body>
 </html>
