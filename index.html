@@ -15,12 +15,12 @@
     <button onclick="changeTitle()">Klick</button>
    
    <script>
-        // Genom att deklarera variabeln title utanför funktionen changeTitle så undviker man att inget händer
+        // Genom att tilldela variabeln title ett värde utanför funktionen changeTitle så undviker man att inget händer
         // första gången man klickar på knappen.
         let title = document.getElementById("title").innerHTML;
         
         function changeTitle(){
-            // Ternary operator fungerar inte, tar gärna feedback på varför. 
+            // Ternary operator som jag först inte fick att fungera men som nu funkar magiskt.
             // title = (title === "Hello World") ? title = "Goodbye World" : title = "Hello World";
             
             if (title == "Hello World"){
